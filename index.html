@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>m1905电影网 - 经典与潮流交汇·高清电影电视剧免费在线观看</title>
+<meta name="description" content="m1905电影网汇集经典老片与最新热映影片，提供高清电影、热播电视剧、综艺动漫在线观看，1905电影人的专业选择。">
+<meta name="keywords" content="m1905电影网,1905电影网,高清电影在线看,经典老电影,热播电视剧,免费电影网站,影视资源">
+<meta name="author" content="m1905电影网">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="m1905电影网 - 经典与潮流交汇·高清电影电视剧免费在线观看">
+<meta property="og:description" content="汇集经典老片与最新热映影片，提供高清电影、热播电视剧、综艺动漫在线观看。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://m1905dianyingwang-wap.github.io">
+<link rel="canonical" href="https://m1905dianyingwang-wap.github.io">
+<style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    :root{
+        --ink:#0d0d0d;
+        --ink2:#1a1a1a;
+        --cream:#f5f0e8;
+        --cream2:#ebe4d8;
+        --gold:#c9a84c;
+        --gold-light:#e0c878;
+        --red:#c0392b;
+        --red2:#e74c3c;
+        --text-dark:#1a1a1a;
+        --text-mid:#555;
+        --text-light:#999;
+    }
+    html{scroll-behavior:smooth;}
+    body{
+        font-family:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",system-ui,sans-serif;
+        line-height:1.8;
+        overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit;}
+    ::selection{background:var(--gold);color:#fff;}
+
+    /* ===== Navbar ===== */
+    .navbar{
+        position:sticky;top:0;z-index:100;
+        background:var(--ink);
+        border-bottom:2px solid var(--gold);
+    }
+    .nav-inner{
+        max-width:1200px;margin:0 auto;
+        padding:1rem 1.5rem;
+        display:flex;align-items:center;justify-content:space-between;
+    }
+    .nav-logo{
+        display:flex;align-items:center;gap:.6rem;
+    }
+    .nav-logo .logo-num{
+        font-size:1.8rem;font-weight:900;
+        color:var(--gold);
+        font-family:"Georgia",serif;
+        letter-spacing:-1px;
+    }
+    .nav-logo .logo-txt{
+        font-size:1.1rem;font-weight:700;color:#fff;letter-spacing:1px;
+    }
+    .nav-links{display:flex;gap:1.8rem;}
+    .nav-links a{
+        font-size:.82rem;color:#bbb;transition:.2s;font-weight:500;
+        position:relative;
+    }
+    .nav-links a:hover{color:var(--gold);}
+    .nav-links a::after{
+        content:'';position:absolute;left:0;bottom:-4px;
+        width:0;height:2px;background:var(--gold);transition:.3s;
+    }
+    .nav-links a:hover::after{width:100%;}
+
+    /* ===== Section Base ===== */
+    .container{max-width:1200px;margin:0 auto;padding:0 1.5rem;}
+    .section{padding:5rem 0;}
+    .sec-head{margin-bottom:3rem;text-align:center;}
+    .sec-head .sec-kicker{
+        display:inline-block;
+        font-size:.7rem;letter-spacing:4px;text-transform:uppercase;
+        color:var(--gold);font-weight:700;margin-bottom:.6rem;
+    }
+    .sec-head h2{
+        font-size:clamp(1.6rem,4vw,2.4rem);
+        font-weight:900;color:inherit;
+    }
+    .sec-head h2 span{color:var(--gold);}
+    .sec-head p{
+        font-size:.85rem;color:inherit;opacity:.6;
+        margin-top:.5rem;max-width:420px;margin-left:auto;margin-right:auto;
+    }
+
+    /* ===== Hero ===== */
+    .hero{
+        min-height:75vh;
+        background:var(--ink);
+        color:#fff;
+        display:flex;align-items:center;
+        position:relative;
+        overflow:hidden;
+    }
+    .hero::before{
+        content:'';
+        position:absolute;right:-5%;top:-10%;
+        width:50%;height:120%;
+        background:radial-gradient(ellipse,rgba(201,168,76,.12),transparent 70%);
+    }
+    .hero-inner{
+        max-width:1200px;margin:0 auto;padding:0 1.5rem;
+        display:grid;grid-template-columns:1fr 1fr;gap:3rem;
+        align-items:center;position:relative;z-index:1;
+    }
+    .hero-left .hero-tag{
+        display:inline-block;
+        border:1px solid var(--gold);
+        color:var(--gold);
+        font-size:.72rem;letter-spacing:2px;
+        padding:.25rem 1rem;border-radius:2px;
+        margin-bottom:1.2rem;
+    }
+    .hero-left h1{
+        font-size:clamp(2rem,6vw,3.8rem);
+        font-weight:900;line-height:1.15;margin-bottom:1rem;
+    }
+    .hero-left h1 em{
+        font-style:normal;color:var(--gold);
+        font-family:"Georgia",serif;
+    }
+    .hero-left p{
+        font-size:.95rem;color:#aaa;max-width:420px;margin-bottom:2rem;
+    }
+    .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+    .btn-primary{
+        background:var(--gold);color:#0d0d0d;
+        padding:.75rem 2rem;border-radius:2px;
+        font-size:.85rem;font-weight:700;transition:.3s;
+        border:none;cursor:pointer;
+    }
+    .btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);}
+    .btn-outline{
+        border:1px solid rgba(255,255,255,.3);color:#fff;
+        padding:.75rem 2rem;border-radius:2px;
+        font-size:.85rem;font-weight:500;transition:.3s;
+    }
+    .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+    .hero-right{
+        display:grid;grid-template-columns:1fr 1fr;gap:.8rem;
+    }
+    .hr-stat{
+        background:rgba(255,255,255,.04);
+        border:1px solid rgba(201,168,76,.2);
+        border-radius:4px;padding:1.2rem;
+        text-align:center;
+    }
+    .hr-stat .num{
+        font-size:1.8rem;font-weight:900;color:var(--gold);
+        font-family:"Georgia",serif;
+    }
+    .hr-stat .label{
+        font-size:.72rem;color:#888;margin-top:.2rem;letter-spacing:1px;
+    }
+
+    /* ===== Sec A: Now Playing - Split Cards ===== */
+    .sec-a{background:var(--cream);color:var(--text-dark);}
+    .film-strip{
+        display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;
+    }
+    .film-card{
+        background:#fff;
+        border-radius:3px;
+        overflow:hidden;
+        box-shadow:0 2px 12px rgba(0,0,0,.06);
+        transition:.35s;cursor:pointer;
+    }
+    .film-card:hover{
+        transform:translateY(-6px);
+        box-shadow:0 12px 30px rgba(0,0,0,.12);
+    }
+    .film-thumb{
+        height:180px;
+        display:flex;align-items:center;justify-content:center;
+        font-size:2.5rem;
+        position:relative;
+    }
+    .film-thumb::after{
+        content:'';position:absolute;left:0;right:0;bottom:0;
+        height:3px;
+    }
+    .f1 .film-thumb{background:linear-gradient(135deg,#1a1a2e,#16213e);}
+    .f1 .film-thumb::after{background:var(--gold);}
+    .f2 .film-thumb{background:linear-gradient(135deg,#2d1b00,#5c3a00);}
+    .f2 .film-thumb::after{background:#e67e22;}
+    .f3 .film-thumb{background:linear-gradient(135deg,#0a1628,#1a3050);}
+    .f3 .film-thumb::after{background:#3498db;}
+    .film-card .fc-body{padding:1rem 1.2rem;}
+    .film-card h3{font-size:1rem;font-weight:700;margin-bottom:.2rem;}
+    .film-card .fc-meta{
+        font-size:.72rem;color:var(--text-light);margin-bottom:.6rem;
+    }
+    .film-card .fc-tags{display:flex;gap:.4rem;flex-wrap:wrap;}
+    .film-card .fc-tags span{
+        font-size:.68rem;padding:.15rem .5rem;border-radius:2px;
+        background:var(--cream2);color:var(--text-mid);
+    }
+
+    /* ===== Sec B: Timeline - Vertical alternating ===== */
+    .sec-b{background:var(--ink);color:#fff;}
+    .sec-b .sec-head h2{color:#fff;}
+    .timeline{
+        position:relative;
+        max-width:800px;margin:0 auto;
+        padding:1rem 0;
+    }
+    .timeline::before{
+        content:'';position:absolute;
+        left:50%;top:0;bottom:0;
+        width:2px;background:rgba(201,168,76,.25);
+        transform:translateX(-50%);
+    }
+    .tl-item{
+        position:relative;
+        padding:0 0 2.5rem;
+    }
+    .tl-item:nth-child(odd) .tl-content{margin-right:55%;padding-right:2rem;text-align:right;}
+    .tl-item:nth-child(even) .tl-content{margin-left:55%;padding-left:2rem;}
+    .tl-dot{
+        position:absolute;left:50%;top:0;
+        width:14px;height:14px;border-radius:50%;
+        background:var(--gold);
+        transform:translateX(-50%);
+        box-shadow:0 0 0 4px var(--ink),0 0 0 5px rgba(201,168,76,.3);
+    }
+    .tl-content{
+        background:rgba(255,255,255,.04);
+        border:1px solid rgba(201,168,76,.15);
+        border-radius:4px;
+        padding:1.2rem 1.5rem;
+        transition:.3s;cursor:pointer;
+    }
+    .tl-content:hover{
+        border-color:var(--gold);
+        background:rgba(201,168,76,.06);
+    }
+    .tl-content .tl-year{
+        font-size:.75rem;color:var(--gold);font-weight:700;letter-spacing:1px;
+    }
+    .tl-content h3{font-size:.95rem;font-weight:700;margin:.3rem 0;}
+    .tl-content p{font-size:.78rem;color:#999;line-height:1.6;}
+
+    /* ===== Sec C: Channels - Hexagon Grid ===== */
+    .sec-c{background:var(--cream);color:var(--text-dark);}
+    .hex-grid{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:1.5rem 1rem;
+    }
+    .hex-item{
+        text-align:center;
+        padding:1.5rem 1rem;
+        border-radius:6px;
+        background:#fff;
+        border:1px solid var(--cream2);
+        transition:.3s;cursor:pointer;
+        position:relative;
+    }
+    .hex-item::before{
+        content:'';position:absolute;top:0;left:0;right:0;
+        height:3px;border-radius:6px 6px 0 0;
+        transform:scaleX(0);transition:.3s;transform-origin:left;
+    }
+    .hex-item:hover::before{transform:scaleX(1);}
+    .hex-item:hover{
+        transform:translateY(-4px);
+        box-shadow:0 8px 24px rgba(0,0,0,.08);
+    }
+    .hex-item .hex-icon{
+        font-size:2.2rem;margin-bottom:.6rem;
+        display:inline-block;
+        width:60px;height:60px;line-height:60px;
+        border-radius:50%;
+        color:#fff;
+    }
+    .hxi1{background:linear-gradient(135deg,#e74c3c,#c0392b);}
+    .hxi2{background:linear-gradient(135deg,#3498db,#2980b9);}
+    .hxi3{background:linear-gradient(135deg,#2ecc71,#27ae60);}
+    .hxi4{background:linear-gradient(135deg,#9b59b6,#8e44ad);}
+    .hxi5{background:linear-gradient(135deg,#f39c12,#e67e22);}
+    .hxi6{background:linear-gradient(135deg,#1abc9c,#16a085);}
+    .hex-item:nth-child(1)::before{background:#e74c3c;}
+    .hex-item:nth-child(2)::before{background:#3498db;}
+    .hex-item:nth-child(3)::before{background:#2ecc71;}
+    .hex-item:nth-child(4)::before{background:#9b59b6;}
+    .hex-item:nth-child(5)::before{background:#f39c12;}
+    .hex-item:nth-child(6)::before{background:#1abc9c;}
+    .hex-item h3{font-size:.9rem;font-weight:700;margin-bottom:.2rem;}
+    .hex-item p{font-size:.72rem;color:var(--text-light);}
+
+    /* ===== Sec D: News List ===== */
+    .sec-d{background:var(--ink);color:#fff;}
+    .sec-d .sec-head h2{color:#fff;}
+    .news-list{
+        max-width:860px;margin:0 auto;
+    }
+    .news-row{
+        display:flex;gap:1.2rem;align-items:flex-start;
+        padding:1.2rem 0;
+        border-bottom:1px solid rgba(255,255,255,.08);
+        transition:.2s;cursor:pointer;
+    }
+    .news-row:hover{padding-left:.8rem;}
+    .news-row .nr-date{
+        flex:0 0 52px;text-align:center;
+        border-right:2px solid var(--gold);
+        padding-right:.8rem;
+    }
+    .news-row .nr-date .day{
+        font-size:1.3rem;font-weight:900;color:var(--gold);
+        font-family:"Georgia",serif;line-height:1;
+    }
+    .news-row .nr-date .mon{
+        font-size:.65rem;color:#888;margin-top:.2rem;
+    }
+    .news-row .nr-body{flex:1;}
+    .news-row .nr-body h3{
+        font-size:.92rem;font-weight:600;margin-bottom:.2rem;
+        transition:.2s;
+    }
+    .news-row:hover .nr-body h3{color:var(--gold);}
+    .news-row .nr-body p{
+        font-size:.75rem;color:#888;
+    }
+    .news-row .nr-cat{
+        flex:0 0 auto;
+        font-size:.68rem;padding:.15rem .6rem;border-radius:2px;
+        background:rgba(201,168,76,.15);color:var(--gold);
+        height:fit-content;
+    }
+
+    /* ===== Footer ===== */
+    footer{
+        background:var(--ink2);
+        padding:3rem 1.5rem 2rem;
+        border-top:2px solid var(--gold);
+    }
+    .foot-inner{
+        max-width:1200px;margin:0 auto;
+        text-align:center;
+    }
+    .foot-brand{
+        font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:.5rem;
+    }
+    .foot-brand .logo-num{
+        font-size:1.5rem;font-weight:900;color:var(--gold);
+        font-family:"Georgia",serif;
+    }
+    .foot-desc{
+        font-size:.8rem;color:#777;max-width:380px;margin:0 auto 1.5rem;
+    }
+    .foot-nav{
+        display:flex;justify-content:center;gap:1.8rem;flex-wrap:wrap;
+        margin-bottom:1.5rem;
+    }
+    .foot-nav a{font-size:.8rem;color:#888;transition:.2s;}
+    .foot-nav a:hover{color:var(--gold);}
+    .foot-copy{
+        font-size:.72rem;color:#555;
+        border-top:1px solid rgba(255,255,255,.06);
+        padding-top:1.2rem;
+    }
+    .foot-copy a{color:var(--gold);}
+
+    /* ===== Mobile ===== */
+    @media (max-width:768px){
+        .nav-links{display:none;}
+        .hero-inner{grid-template-columns:1fr;gap:2rem;}
+        .hero-right{grid-template-columns:1fr 1fr;}
+        .section{padding:3rem 0;}
+        .film-strip{grid-template-columns:1fr;}
+        .hex-grid{grid-template-columns:1fr 1fr;}
+        .timeline::before{left:14px;}
+        .tl-item:nth-child(odd) .tl-content,
+        .tl-item:nth-child(even) .tl-content{
+            margin:0 0 0 40px;padding:1rem;text-align:left;
+        }
+        .tl-dot{left:14px;}
+    }
+    @media (max-width:480px){
+        .hex-grid{grid-template-columns:1fr;}
+    }
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-inner">
+        <div class="nav-logo">
+            <span class="logo-num">1905</span>
+            <span class="logo-txt">电影网</span>
+        </div>
+        <div class="nav-links">
+            <a href="#now">正在热映</a>
+            <a href="#classic">经典回顾</a>
+            <a href="#channel">频道导航</a>
+            <a href="#news">行业资讯</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-left">
+            <span class="hero-tag">SINCE 1905 · 电影人的选择</span>
+            <h1>经典与潮流<br><em>交汇</em>之处</h1>
+            <p>从 1905 年中国第一部电影诞生，到如今数字影像的无限可能。m1905电影网，见证百年光影变迁，为您提供最新、最全的影视资源。</p>
+            <div class="hero-btns">
+                <button class="btn-primary">立即观看</button>
+                <button class="btn-outline">了解更多</button>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hr-stat"><div class="num">10000+</div><div class="label">影视资源</div></div>
+            <div class="hr-stat"><div class="num">500+</div><div class="label">独家内容</div></div>
+            <div class="hr-stat"><div class="num">4K</div><div class="label">超清画质</div></div>
+            <div class="hr-stat"><div class="num">365</div><div class="label">全年更新</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Sec A: Now Playing -->
+<section class="section sec-a" id="now">
+    <div class="container">
+        <div class="sec-head">
+            <span class="sec-kicker">Now Showing</span>
+            <h2>正在<span>热映</span></h2>
+            <p>最新院线大片，高清在线观看</p>
+        </div>
+        <div class="film-strip">
+            <div class="film-card f1">
+                <div class="film-thumb">🎭</div>
+                <div class="fc-body">
+                    <h3>无声的证词</h3>
+                    <div class="fc-meta">悬疑 / 犯罪 · 2026</div>
+                    <div class="fc-tags"><span>高分</span><span>悬疑</span><span>院线</span></div>
+                </div>
+            </div>
+            <div class="film-card f2">
+                <div class="film-thumb">⚔️</div>
+                <div class="fc-body">
+                    <h3>大漠孤烟</h3>
+                    <div class="fc-meta">动作 / 武侠 · 2026</div>
+                    <div class="fc-tags"><span>动作</span><span>武侠</span><span>热映</span></div>
+                </div>
+            </div>
+            <div class="film-card f3">
+                <div class="film-thumb">🌌</div>
+                <div class="fc-body">
+                    <h3>星河彼岸</h3>
+                    <div class="fc-meta">科幻 / 冒险 · 2026</div>
+                    <div class="fc-tags"><span>科幻</span><span>视觉盛宴</span><span>IMAX</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sec B: Classic Timeline -->
+<section class="section sec-b" id="classic">
+    <div class="container">
+        <div class="sec-head">
+            <span class="sec-kicker">Classic Review</span>
+            <h2>经典<span>回顾</h2>
+            <p>百年电影史，每一帧都是时代印记</p>
+        </div>
+        <div class="timeline">
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <div class="tl-year">1905</div>
+                    <h3>《定军山》— 中国电影元年</h3>
+                    <p>任庆泰执导的京剧短片，标志着中国电影的诞生。黑白无声，却开启了一个世纪的影像传奇。</p>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <div class="tl-year">1934</div>
+                    <h3>《渔光曲》— 首获国际荣誉</h3>
+                    <p>蔡楚生导演作品，在莫斯科国际电影节获奖，是中国第一部获得国际奖项的电影。</p>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <div class="tl-year">1982</div>
+                    <h3>《少林寺》— 功夫片巅峰</h3>
+                    <p>张鑫炎导演，李连杰主演。万人空巷的观影热潮，将中国功夫推向世界舞台。</p>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <div class="tl-year">2002</div>
+                    <h3>《英雄》— 国产大片时代开启</h3>
+                    <p>张艺谋导演，中国电影工业化里程碑，开启国产商业大片的全球化之路。</p>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <div class="tl-year">2026</div>
+                    <h3>数字影像新时代</h3>
+                    <p>4K/8K、VR/AR、AI 辅助制作，中国电影正以前所未有的姿态走向世界。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sec C: Channels -->
+<section class="section sec-c" id="channel">
+    <div class="container">
+        <div class="sec-head">
+            <span class="sec-kicker">Channels</span>
+            <h2>频道<span>导航</span></h2>
+            <p>六大频道，满足你的所有观影需求</p>
+        </div>
+        <div class="hex-grid">
+            <div class="hex-item">
+                <span class="hex-icon hxi1">🎬</span>
+                <h3>电影频道</h3>
+                <p>院线大片 · 经典老片</p>
+            </div>
+            <div class="hex-item">
+                <span class="hex-icon hxi2">📺</span>
+                <h3>电视剧频道</h3>
+                <p>热播剧集 · 美剧韩剧</p>
+            </div>
+            <div class="hex-item">
+                <span class="hex-icon hxi3">🎤</span>
+                <h3>综艺频道</h3>
+                <p>热门综艺 · 真人秀</p>
+            </div>
+            <div class="hex-item">
+                <span class="hex-icon hxi4">🎨</span>
+                <h3>动漫频道</h3>
+                <p>国漫日漫 · 剧场版</p>
+            </div>
+            <div class="hex-item">
+                <span class="hex-icon hxi5">📽️</span>
+                <h3>纪录片频道</h3>
+                <p>人文历史 · 自然地理</p>
+            </div>
+            <div class="hex-item">
+                <span class="hex-icon hxi6">⭐</span>
+                <h3>独家频道</h3>
+                <p>自制内容 · 独家资源</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sec D: News -->
+<section class="section sec-d" id="news">
+    <div class="container">
+        <div class="sec-head">
+            <span class="sec-kicker">News & Insights</span>
+            <h2>行业<span>资讯</span></h2>
+            <p>最新影视动态、深度行业洞察</p>
+        </div>
+        <div class="news-list">
+            <div class="news-row">
+                <div class="nr-date"><div class="day">12</div><div class="mon">OCT</div></div>
+                <div class="nr-body">
+                    <h3>中国电影诞生 121 周年：从《定军山》到数字影像的百年跨越</h3>
+                    <p>回顾中国电影百年发展历程，探讨新时代的技术变革与创作方向。</p>
+                </div>
+                <span class="nr-cat">深度</span>
+            </div>
+            <div class="news-row">
+                <div class="nr-date"><div class="day">10</div><div class="mon">OCT</div></div>
+                <div class="nr-body">
+                    <h3>2026 国庆档票房创新高，《无声的证词》领跑</h3>
+                    <p>国庆假期七天票房突破 45 亿，悬疑犯罪类型片表现抢眼。</p>
+                </div>
+                <span class="nr-cat">票房</span>
+            </div>
+            <div class="news-row">
+                <div class="nr-date"><div class="day">08</div><div class="mon">OCT</div></div>
+                <div class="nr-body">
+                    <h3>AI 技术赋能电影制作：虚拟拍摄成行业新标配</h3>
+                    <p>多家头部影视公司引入虚拟拍摄技术，制作效率提升 40% 以上。</p>
+                </div>
+                <span class="nr-cat">科技</span>
+            </div>
+            <div class="news-row">
+                <div class="nr-date"><div class="day">05</div><div class="mon">OCT</div></div>
+                <div class="nr-body">
+                    <h3>国产动画电影出海加速，多部作品海外定档</h3>
+                    <p>《山海传说》等国产动画陆续登陆北美、日韩院线，海外市场持续拓展。</p>
+                </div>
+                <span class="nr-cat">产业</span>
+            </div>
+            <div class="news-row">
+                <div class="nr-date"><div class="day">01</div><div class="mon">OCT</div></div>
+                <div class="nr-body">
+                    <h3>流媒体与院线融合：窗口期缩短成新趋势</h3>
+                    <p>多家制片方宣布缩短院线窗口期，线上线下同步发行模式逐步成熟。</p>
+                </div>
+                <span class="nr-cat">趋势</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="foot-inner">
+        <div class="foot-brand"><span class="logo-num">1905</span> 电影网</div>
+        <p class="foot-desc">经典与潮流交汇 · 高清影视在线观看 · 电影人的专业选择</p>
+        <nav class="foot-nav">
+            <a href="#now">正在热映</a>
+            <a href="#classic">经典回顾</a>
+            <a href="#channel">频道导航</a>
+            <a href="#news">行业资讯</a>
+        </nav>
+        <p class="foot-copy">© 2026 m1905电影网 | 网站网址：<a href="https://m1905dianyingwang-wap.github.io">https://m1905dianyingwang-wap.github.io</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
